@@ -6,7 +6,7 @@ interface ModalInitialState {
 }
 const initialState: ModalInitialState = {
   isOpenPost: false,
-  isOpenComment: false,
+  isOpenComment: true,
 };
 
 const modalSlice = createSlice({

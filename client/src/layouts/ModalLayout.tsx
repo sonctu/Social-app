@@ -25,12 +25,12 @@ const ModalLayout: FC<IProps> = ({ children, isOpen, handleClose }) => {
         ref={overplayRef}
       ></div>
       <button
-        className="absolute flex items-center justify-center w-8 h-8 text-white top-2 right-2"
+        className="absolute z-10 flex items-center justify-center w-8 h-8 text-white top-2 right-2"
         onClick={handleClose}
       >
         <XIcon></XIcon>
       </button>
-      {children}
+      <div className="relative z-10">{children}</div>
     </div>,
     document.body
   );

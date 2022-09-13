@@ -12,6 +12,7 @@ module.exports = {
         graySecondary: "#C8C8C8",
         bluePrimary: "#0095f6",
         blackPrimary: "#262626",
+        pinkPrimary: "#ed4956",
       },
       boxShadow: {
         "3xl": "rgba(0, 0, 0, 0.24) 0px 3px 8px 3px;",

@@ -1,16 +1,10 @@
 import React, { FC } from "react";
 import OptionIcon from "../Icons/OptionIcon";
-import HeartIcon from "../Icons/HeartIcon";
-import CommentIcon from "../Icons/CommentIcon";
-import ShareIcon from "../Icons/ShareIcon";
-import SaveIcon from "../Icons/SaveIcon";
 import ImageGradient from "../Common/ImageGradient";
-import EmotionIcon from "../Icons/EmotionIcon";
-import { useDispatch } from "react-redux";
-import { showModalComment } from "../../store/slices/modalSlice";
+import PostContent from "../Common/PostContent";
+import CommentInput from "../Common/CommentInput";
 
 const PostItem: FC = () => {
-  const dispatch = useDispatch();
   return (
     <div className="mb-4 bg-white border rounded-md border-grayColor">
       <div className="flex items-center justify-between p-3">
@@ -30,40 +24,9 @@ const PostItem: FC = () => {
         />
       </div>
       <div className="p-3">
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-4">
-            <div className="cursor-pointer">
-              <HeartIcon></HeartIcon>
-            </div>
-            <div
-              className="cursor-pointer"
-              onClick={() => dispatch(showModalComment(true))}
-            >
-              <CommentIcon></CommentIcon>
-            </div>
-            <div className="cursor-pointer">
-              <ShareIcon></ShareIcon>
-            </div>
-          </div>
-          <div className="cursor-pointer">
-            <SaveIcon></SaveIcon>
-          </div>
-        </div>
-        <div className="text-sm font-bold">10,939 like</div>
+        <PostContent></PostContent>
       </div>
-      <div className="flex items-center px-4 py-3 border-t border-grayColor">
-        <span className="mr-2 cursor-pointer">
-          <EmotionIcon></EmotionIcon>
-        </span>
-        <input
-          type="text"
-          placeholder="Add a comment..."
-          className="flex-1 pr-2 text-sm text-blackPrimary"
-        />
-        <span className="text-sm font-semibold cursor-pointer text-bluePrimary">
-          Post
-        </span>
-      </div>
+      <CommentInput></CommentInput>
     </div>
   );
 };

@@ -11,11 +11,13 @@ const ImageGradient: FC<IProps> = ({
   className = "",
 }) => {
   return (
-    <div className={`instagram-color ${width} ${height} ${className}`}>
+    <div
+      className={`instagram-color flex-shrink-0 ${width} ${height} ${className}`}
+    >
       <img
         src="https://kynguyenlamdep.com/wp-content/uploads/2022/06/anh-gai-xinh-deo-kinh-700x933.jpg"
         alt=""
-        className="object-cover w-full h-full rounded-full "
+        className="object-cover w-full h-full rounded-full"
       />
     </div>
   );

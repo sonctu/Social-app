@@ -19,7 +19,7 @@ const ModalPost: FC = () => {
   return (
     <ModalLayout isOpen={isOpenPost} handleClose={handleClose}>
       <div
-        className={`relative z-10 w-[880px] flex rounded-xl transition-all duration-200 flex-col bg-white h-[520px] overflow-hidden ${
+        className={`w-[880px] flex rounded-xl transition-all duration-200 flex-col bg-white h-[520px] overflow-hidden ${
           isOpenPost
             ? "opacity-100 visible scale-100"
             : "opacity-0 invisible scale-75"
